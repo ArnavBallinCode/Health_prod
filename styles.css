@@ -1,5 +1,3 @@
-/* styles.css */
-
 /* Body and Theme */
 body.light-mode {
   background-color: #f9f9f9;
@@ -13,7 +11,7 @@ body.dark-mode {
 
 /* Header */
 header {
-  background-color: #4CAF50; /* Green background for header */
+  background-color: #add8e6; /* Light blue background for header */
   color: white;
   padding: 10px;
   text-align: center;
@@ -35,12 +33,12 @@ header nav a {
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
-  background-color: #6abf69;
+  background-color: #87CEEB; /* Slightly darker blue for links */
   transition: background-color 0.3s ease;
 }
 
 header nav a:hover {
-  background-color: #5aaa58;
+  background-color: #7bb9d7; /* Darker hover state */
 }
 
 /* Main Section */
@@ -72,14 +70,14 @@ input, button {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #add8e6; /* Light blue button */
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #87CEEB; /* Slightly darker blue on hover */
 }
 
 /* Tables */
@@ -112,7 +110,7 @@ footer {
   margin: 20px auto;
   text-align: center;
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #add8e6; /* Light blue background for footer */
   color: white;
   border-radius: 8px;
 }
