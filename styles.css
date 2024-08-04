@@ -1,4 +1,36 @@
 /* styles.css */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styles */
+section {
+  padding: 20px;
+}
+
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -27,6 +59,7 @@ tbody tr:hover {
   background-color: #ddd;
 }
 
+/* Forms */
 form {
   margin-bottom: 20px;
 }
@@ -36,9 +69,18 @@ form label {
   margin: 10px 0 5px;
 }
 
-form input, form select, form button {
+form input, form select, form textarea, form button {
   display: block;
+  width: 100%;
   margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form textarea {
+  height: 100px;
+  resize: vertical;
 }
 
 form button {
@@ -51,4 +93,14 @@ form button {
 
 form button:hover {
   background-color: #0056b3;
+}
+
+/* Additional Styles */
+h1, h2 {
+  color: #333;
+}
+
+ul {
+  list-style-type: square;
+  padding-left: 20px;
 }
