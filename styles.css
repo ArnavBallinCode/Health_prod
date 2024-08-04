@@ -1,40 +1,76 @@
 /* styles.css */
 
-/* General Styles */
+/* General Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 header {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: white;
   padding: 10px 20px;
   text-align: center;
 }
 
-header a {
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
 }
 
-header a:hover {
-  text-decoration: underline;
-}
-
-/* Section Styles */
 section {
   padding: 20px;
 }
 
-/* Tables */
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
 }
 
 table, th, td {
@@ -47,60 +83,59 @@ th, td {
 }
 
 th {
-  background-color: #007bff;
+  background-color: #4CAF50;
   color: white;
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333333;
+  color: #f0f0f0;
 }
 
-tbody tr:hover {
-  background-color: #ddd;
+header.dark-mode {
+  background-color: #555555;
 }
 
-/* Forms */
-form {
-  margin-bottom: 20px;
+button.dark-mode {
+  background-color: #333333;
+  color: #f0f0f0;
 }
 
-form label {
-  display: block;
-  margin: 10px 0 5px;
+button.dark-mode:hover {
+  background-color: #444444;
 }
 
-form input, form select, form textarea, form button {
-  display: block;
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* Toggle Switch */
+.toggle-switch {
+  position: fixed;
+  top: 20px;
+  right: 20px;
 }
 
-form textarea {
-  height: 100px;
-  resize: vertical;
+.toggle-switch input {
+  display: none;
 }
 
-form button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
+.toggle-switch label {
   cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-form button:hover {
-  background-color: #0056b3;
+.toggle-switch label:before {
+  content: 'Light Mode';
 }
 
-/* Additional Styles */
-h1, h2 {
-  color: #333;
+.toggle-switch input:checked + label {
+  background-color: #333333;
 }
 
-ul {
-  list-style-type: square;
-  padding-left: 20px;
+.toggle-switch input:checked + label:before {
+  content: 'Dark Mode';
 }
