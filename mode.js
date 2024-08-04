@@ -2,18 +2,20 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const modeSwitch = document.getElementById('modeSwitch');
-  const currentMode = localStorage.getItem('mode') || 'light-mode';
-  
-  document.body.classList.add(currentMode);
-  modeSwitch.checked = currentMode === 'dark-mode';
+
+  // Load saved mode from local storage
+  if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    modeSwitch.checked = true;
+  }
 
   modeSwitch.addEventListener('change', () => {
     if (modeSwitch.checked) {
-      document.body.classList.replace('light-mode', 'dark-mode');
-      localStorage.setItem('mode', 'dark-mode');
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
     } else {
-      document.body.classList.replace('dark-mode', 'light-mode');
-      localStorage.setItem('mode', 'light-mode');
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
     }
   });
 });
