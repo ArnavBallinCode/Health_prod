@@ -11,7 +11,7 @@ body.dark-mode {
 
 /* Header */
 header {
-  background-color: #add8e6; /* Light blue background for header */
+  background-color: #1184aa; /* Light blue background for header */
   color: white;
   padding: 10px;
   text-align: center;
@@ -119,12 +119,11 @@ tr:nth-child(even) {
 
 /* Footer */
 footer {
-  margin: 20px auto;
-  text-align: center;
   padding: 10px;
-  background-color: #add8e6; /* Light blue background for footer */
-  color: white;
+  background-color: #1aaade; /* Light blue background for footer */
   border-radius: 8px;
+  bottom: 1px;
+  position:fixed;
 }
 
 /* Toggle Switch */
