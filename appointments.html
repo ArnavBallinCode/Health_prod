@@ -9,18 +9,30 @@
 <body class="light-mode">
   <header>
     <h1>Manage Appointments</h1>
-    <a href="index.html">Back to Home</a>
+    <br>
+    <br>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="appointments.html">Appointments</a></li>
+        <li><a href="preop.html">Preoperative Planning</a></li>
+        <li><a href="inventory.html">Inventory Management</a></li>
+        <li><a href="accounting.html">Accounting</a></li>
+        <li><a href="about.html">About Me</a></li>
+      </ul>
+    </nav>
   </header>
+
   <section>
     <form id="appointmentsForm">
       <label for="patientName">Patient Name:</label>
-      <input type="text" id="patientName" name="patientName" required>
+      <input type="text" id="patientName" name="patientName" required pattern="[A-Za-z]{3,8}">
       
       <label for="appointmentDate">Appointment Date:</label>
       <input type="date" id="appointmentDate" name="appointmentDate" required>
       
       <label for="doctorName">Doctor Name:</label>
-      <input type="text" id="doctorName" name="doctorName" required>
+      <input type="text" id="doctorName" name="doctorName" required pattern="[A-Za-z]{3,8}">
       
       <button type="submit">Add Appointment</button>
     </form>
