@@ -1,30 +1,25 @@
 // preop.js
 
-// Function to handle form submission
-document.getElementById('preopChecklistForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  // Get form values
-  const patientName = document.getElementById('patientName').value;
-  const procedure = document.getElementById('procedure').value;
-  const checklist = document.getElementById('checklist').value;
-  
-  // Validate input
-  if (!patientName || !procedure || !checklist) {
-    alert('Please fill in all fields.');
-    return;
-  }
-  
-  // Create a new row in the checklists table
-  const table = document.getElementById('checklistsTable').getElementsByTagName('tbody')[0];
-  const newRow = table.insertRow();
-  newRow.insertCell(0).innerText = patientName;
-  newRow.insertCell(1).innerText = procedure;
-  newRow.insertCell(2).innerText = checklist;
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('preopForm');
+  const table = document.getElementById('preopTable').getElementsByTagName('tbody')[0];
 
-  // Display confirmation message
-  alert('Checklist saved successfully!');
-  
-  // Clear the form
-  document.getElementById('preopChecklistForm').reset();
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const surgeryDate = document.getElementById('surgeryDate').value;
+    const surgeryType = document.getElementById('surgeryType').value;
+    const surgeonName = document.getElementById('surgeonName').value;
+
+    if (surgeryDate && surgeryType && surgeonName) { // Ensure all fields are filled
+      const newRow = table.insertRow();
+      newRow.insertCell().textContent = surgeryDate;
+      newRow.insertCell().textContent = surgeryType;
+      newRow.insertCell().textContent = surgeonName;
+
+      form.reset(); // Reset the form fields
+    } else {
+      alert('Please fill out all fields.');
+    }
+  });
 });
