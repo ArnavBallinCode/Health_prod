@@ -1,116 +1,50 @@
 /* styles.css */
 
-/* General Styling */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-/* Light Mode */
 body.light-mode {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: white;
+  color: black;
 }
 
-header {
-  background-color: #4CAF50;
+body.dark-mode {
+  background-color: #121212;
   color: white;
-  padding: 10px 20px;
+}
+
+header, footer {
   text-align: center;
-}
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline;
-  margin: 0 10px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-section {
-  padding: 20px;
+  margin: 20px 0;
 }
 
 form {
-  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px auto;
 }
 
-label {
-  display: block;
-  margin: 10px 0 5px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 8px;
+label, input, button {
   margin-bottom: 10px;
-}
-
-button {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
+  margin: 20px 0;
 }
 
 table, th, td {
-  border: 1px solid #ddd;
+  border: 1px solid black;
 }
 
 th, td {
-  padding: 8px;
+  padding: 10px;
   text-align: left;
 }
 
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #333333;
-  color: #f0f0f0;
-}
-
-header.dark-mode {
-  background-color: #555555;
-}
-
-button.dark-mode {
-  background-color: #333333;
-  color: #f0f0f0;
-}
-
-button.dark-mode:hover {
-  background-color: #444444;
-}
-
-/* Toggle Switch */
 .toggle-switch {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
 }
 
 .toggle-switch input {
@@ -118,24 +52,28 @@ button.dark-mode:hover {
 }
 
 .toggle-switch label {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 20px;
+  position: relative;
   cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.toggle-switch label:before {
-  content: 'Light Mode';
+.toggle-switch label::before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s;
 }
 
-.toggle-switch input:checked + label {
-  background-color: #333333;
-}
-
-.toggle-switch input:checked + label:before {
-  content: 'Dark Mode';
+.toggle-switch input:checked + label::before {
+  transform: translateX(20px);
 }
