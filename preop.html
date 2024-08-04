@@ -1,4 +1,3 @@
-<!-- preop.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,52 +6,46 @@
   <title>Preoperative Planning</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode">
   <header>
-    <h1>Preoperative Planning</h1>
+    <h1>Preoperative Planning Tools</h1>
     <a href="index.html">Back to Home</a>
   </header>
   <section>
-    <h2>Surgical Tools and Resources</h2>
-    <ul>
-      <li><strong>Patient History Review:</strong> Ensure patient history is reviewed for any surgical contraindications.</li>
-      <li><strong>Surgical Checklists:</strong> Utilize checklists to confirm all necessary steps are taken.</li>
-      <li><strong>Imaging Review:</strong> Review preoperative imaging studies (CT, MRI, etc.) to plan the surgical approach.</li>
-      <li><strong>Procedure Protocols:</strong> Follow standardized protocols for each type of procedure.</li>
-    </ul>
-
-    <h2>Preoperative Checklist</h2>
-    <form id="preopChecklistForm">
-      <label for="patientName">Patient Name:</label>
-      <input type="text" id="patientName" name="patientName" required>
+    <h2>Preoperative Planning</h2>
+    <form id="preopForm">
+      <label for="surgeryDate">Surgery Date:</label>
+      <input type="date" id="surgeryDate" name="surgeryDate" required>
       
-      <label for="procedure">Procedure:</label>
-      <input type="text" id="procedure" name="procedure" required>
+      <label for="surgeryType">Surgery Type:</label>
+      <input type="text" id="surgeryType" name="surgeryType" required>
       
-      <label for="checklist">Checklist:</label>
-      <textarea id="checklist" name="checklist" required placeholder="Ensure patient consent, Confirm fasting status, Check for allergies..."></textarea>
+      <label for="surgeonName">Surgeon Name:</label>
+      <input type="text" id="surgeonName" name="surgeonName" required>
       
-      <button type="submit">Save Checklist</button>
+      <button type="submit">Add Surgery Plan</button>
     </form>
     
-    <h2>Existing Checklists</h2>
-    <table id="checklistsTable">
+    <h2>Current Surgery Plans</h2>
+    <table id="preopTable">
       <thead>
         <tr>
-          <th>Patient Name</th>
-          <th>Procedure</th>
-          <th>Checklist</th>
+          <th>Surgery Date</th>
+          <th>Surgery Type</th>
+          <th>Surgeon Name</th>
         </tr>
       </thead>
       <tbody>
-        <!-- Checklists will be dynamically added here -->
+        <!-- Surgery plans will be dynamically added here -->
       </tbody>
     </table>
   </section>
-  <script src="preop.js"></script>
   <div class="toggle-switch">
-  <input type="checkbox" id="modeSwitch">
-  <label for="modeSwitch"></label>
-</div>
+    <input type="checkbox" id="modeSwitch">
+    <label for="modeSwitch"></label>
+  </div>
+  <script src="preop.js"></script>
+  <script src="mode.js"></script>
 </body>
 </html>
+
