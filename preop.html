@@ -8,11 +8,10 @@
 </head>
 <body class="light-mode">
   <header>
-    <h1>Preoperative Planning Tools</h1>
+    <h1>Preoperative Planning</h1>
     <a href="index.html">Back to Home</a>
   </header>
   <section>
-    <h2>Preoperative Planning</h2>
     <form id="preopForm">
       <label for="surgeryDate">Surgery Date:</label>
       <input type="date" id="surgeryDate" name="surgeryDate" required>
@@ -23,10 +22,9 @@
       <label for="surgeonName">Surgeon Name:</label>
       <input type="text" id="surgeonName" name="surgeonName" required>
       
-      <button type="submit">Add Surgery Plan</button>
+      <button type="submit">Add Surgery</button>
     </form>
-    
-    <h2>Current Surgery Plans</h2>
+
     <table id="preopTable">
       <thead>
         <tr>
@@ -36,16 +34,20 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Surgery plans will be dynamically added here -->
+        <!-- Surgeries will be listed here -->
       </tbody>
     </table>
   </section>
+  <footer>
+    <p>Arnav Angarkar - arnav.angarkar20@gmail.com</p>
+  </footer>
   <div class="toggle-switch">
     <input type="checkbox" id="modeSwitch">
     <label for="modeSwitch"></label>
   </div>
-  <script src="preop.js"></script>
   <script src="mode.js"></script>
+  <script src="preop.js"></script>
 </body>
 </html>
+
 
