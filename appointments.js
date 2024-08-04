@@ -1,30 +1,25 @@
 // appointments.js
 
-// Function to handle form submission
-document.getElementById('appointmentForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  
-  // Get form values
-  const doctor = document.getElementById('doctor').value;
-  const date = document.getElementById('date').value;
-  const time = document.getElementById('time').value;
-  
-  // Validate input
-  if (!doctor || !date || !time) {
-    alert('Please fill in all fields.');
-    return;
-  }
-  
-  // Create a new row in the appointments table
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('appointmentsForm');
   const table = document.getElementById('appointmentsTable').getElementsByTagName('tbody')[0];
-  const newRow = table.insertRow();
-  newRow.insertCell(0).innerText = doctor;
-  newRow.insertCell(1).innerText = date;
-  newRow.insertCell(2).innerText = time;
-  
-  // Display confirmation message
-  document.getElementById('appointmentResult').innerHTML = `<p>Appointment booked with ${doctor} on ${date} at ${time}.</p>`;
-  
-  // Clear the form
-  document.getElementById('appointmentForm').reset();
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const patientName = document.getElementById('patientName').value;
+    const appointmentDate = document.getElementById('appointmentDate').value;
+    const doctorName = document.getElementById('doctorName').value;
+
+    if (patientName && appointmentDate && doctorName) { // Ensure all fields are filled
+      const newRow = table.insertRow();
+      newRow.insertCell().textContent = patientName;
+      newRow.insertCell().textContent = appointmentDate;
+      newRow.insertCell().textContent = doctorName;
+
+      form.reset(); // Reset the form fields
+    } else {
+      alert('Please fill out all fields.');
+    }
+  });
 });
