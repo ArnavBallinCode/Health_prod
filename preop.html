@@ -1,0 +1,54 @@
+<!-- preop.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preoperative Planning</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Preoperative Planning</h1>
+    <a href="index.html">Back to Home</a>
+  </header>
+  <section>
+    <h2>Surgical Tools and Resources</h2>
+    <ul>
+      <li><strong>Patient History Review:</strong> Ensure patient history is reviewed for any surgical contraindications.</li>
+      <li><strong>Surgical Checklists:</strong> Utilize checklists to confirm all necessary steps are taken.</li>
+      <li><strong>Imaging Review:</strong> Review preoperative imaging studies (CT, MRI, etc.) to plan the surgical approach.</li>
+      <li><strong>Procedure Protocols:</strong> Follow standardized protocols for each type of procedure.</li>
+    </ul>
+
+    <h2>Preoperative Checklist</h2>
+    <form id="preopChecklistForm">
+      <label for="patientName">Patient Name:</label>
+      <input type="text" id="patientName" name="patientName" required>
+      
+      <label for="procedure">Procedure:</label>
+      <input type="text" id="procedure" name="procedure" required>
+      
+      <label for="checklist">Checklist:</label>
+      <textarea id="checklist" name="checklist" required placeholder="Ensure patient consent, Confirm fasting status, Check for allergies..."></textarea>
+      
+      <button type="submit">Save Checklist</button>
+    </form>
+    
+    <h2>Existing Checklists</h2>
+    <table id="checklistsTable">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Procedure</th>
+          <th>Checklist</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Checklists will be dynamically added here -->
+      </tbody>
+    </table>
+  </section>
+  <script src="preop.js"></script>
+</body>
+</html>
