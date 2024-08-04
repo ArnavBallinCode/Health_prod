@@ -3,51 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Accounting</title>
+  <title>Appointments</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="light-mode">
   <header>
-    <h1>Accounting and Payment Tracking</h1>
+    <h1>Manage Appointments</h1>
     <a href="index.html">Back to Home</a>
   </header>
   <section>
-    <h2>Add Appointment and Payment Status</h2>
-    <form id="accountingForm">
-      <label for="appointmentId">Appointment ID:</label>
-      <input type="text" id="appointmentId" name="appointmentId" required>
-      
+    <form id="appointmentsForm">
       <label for="patientName">Patient Name:</label>
       <input type="text" id="patientName" name="patientName" required>
       
       <label for="appointmentDate">Appointment Date:</label>
       <input type="date" id="appointmentDate" name="appointmentDate" required>
       
-      <label for="paymentStatus">Payment Status:</label>
-      <select id="paymentStatus" name="paymentStatus">
-        <option value="Paid">Paid</option>
-        <option value="Pending">Pending</option>
-        <option value="Cancelled">Cancelled</option>
-      </select>
+      <label for="doctorName">Doctor Name:</label>
+      <input type="text" id="doctorName" name="doctorName" required>
       
-      <button type="submit">Add Record</button>
+      <button type="submit">Add Appointment</button>
     </form>
-    
-    <h2>Appointment and Payment Records</h2>
-    <table id="recordsTable">
+
+    <table id="appointmentsTable">
       <thead>
         <tr>
-          <th>Appointment ID</th>
           <th>Patient Name</th>
           <th>Appointment Date</th>
-          <th>Payment Status</th>
+          <th>Doctor Name</th>
         </tr>
       </thead>
       <tbody>
-        <!-- Records will be dynamically added here -->
+        <!-- Appointments will be listed here -->
       </tbody>
     </table>
   </section>
+  <footer>
+    <p>Arnav Angarkar - arnav.angarkar20@gmail.com</p>
+  </footer>
   <div class="toggle-switch">
     <input type="checkbox" id="modeSwitch">
-    <label for="
+    <label for="modeSwitch"></label>
+  </div>
+  <script src="mode.js"></script>
+  <script src="appointments.js"></script>
+</body>
+</html>
