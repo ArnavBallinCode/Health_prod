@@ -1,17 +1,25 @@
 // inventory.js
-document.getElementById('inventoryForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const medicine = document.getElementById('medicine').value;
-  const quantity = document.getElementById('quantity').value;
-  const expiration = document.getElementById('expiration').value;
 
-  // Add new inventory item to the table
-  const table = document.querySelector('table tbody');
-  const newRow = table.insertRow();
-  newRow.insertCell(0).innerText = medicine;
-  newRow.insertCell(1).innerText = quantity;
-  newRow.insertCell(2).innerText = expiration;
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('inventoryForm');
+  const table = document.getElementById('inventoryTable').getElementsByTagName('tbody')[0];
 
-  // Clear the form
-  document.getElementById('inventoryForm').reset();
+  form.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent form from refreshing the page
+
+    const medicineName = document.getElementById('medicineName').value;
+    const quantity = document.getElementById('quantity').value;
+    const expirationDate = document.getElementById('expirationDate').value;
+
+    if (medicineName && quantity && expirationDate) { // Ensure all fields are filled
+      const newRow = table.insertRow();
+      newRow.insertCell().textContent = medicineName;
+      newRow.insertCell().textContent = quantity;
+      newRow.insertCell().textContent = expirationDate;
+
+      form.reset(); // Reset the form fields
+    } else {
+      alert('Please fill out all fields.');
+    }
+  });
 });
