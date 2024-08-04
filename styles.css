@@ -22,22 +22,32 @@ header h1 {
   font-size: 24px;
 }
 
-header nav {
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
-  margin-top: 10px;
+  justify-content: flex-start;
 }
 
-header nav a {
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a,
+header nav button {
   color: white;
   text-decoration: none;
   padding: 10px 15px;
   border-radius: 5px;
   background-color: #87CEEB; /* Slightly darker blue for links */
+  border: none;
   transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-header nav a:hover {
+header nav a:hover,
+header nav button:hover {
   background-color: #7bb9d7; /* Darker hover state */
 }
 
