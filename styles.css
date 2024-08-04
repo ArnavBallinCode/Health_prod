@@ -30,8 +30,10 @@ header nav ul {
   justify-content: flex-start;
 }
 
-header nav ul li {
+header nav ul li 
+{
   margin-right: 80px;
+  
 }
 
 header nav a,
