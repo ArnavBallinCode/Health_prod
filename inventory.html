@@ -12,7 +12,6 @@
     <a href="index.html">Back to Home</a>
   </header>
   <section>
-    <h2>Add Medicine to Inventory</h2>
     <form id="inventoryForm">
       <label for="medicineName">Medicine Name:</label>
       <input type="text" id="medicineName" name="medicineName" required>
@@ -23,10 +22,9 @@
       <label for="expirationDate">Expiration Date:</label>
       <input type="date" id="expirationDate" name="expirationDate" required>
       
-      <button type="submit">Add Medicine</button>
+      <button type="submit">Add to Inventory</button>
     </form>
-    
-    <h2>Current Inventory</h2>
+
     <table id="inventoryTable">
       <thead>
         <tr>
@@ -36,15 +34,18 @@
         </tr>
       </thead>
       <tbody>
-        <!-- Inventory items will be dynamically added here -->
+        <!-- Inventory items will appear here -->
       </tbody>
     </table>
   </section>
+  <footer>
+    <p>Arnav Angarkar - arnav.angarkar20@gmail.com</p>
+  </footer>
   <div class="toggle-switch">
     <input type="checkbox" id="modeSwitch">
     <label for="modeSwitch"></label>
   </div>
-  <script src="inventory.js"></script>
   <script src="mode.js"></script>
+  <script src="inventory.js"></script>
 </body>
 </html>
